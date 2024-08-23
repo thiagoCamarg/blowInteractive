@@ -109,6 +109,7 @@ span.black {
 
 .descriptions ul {
     display: flex;
+    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
 }
@@ -147,7 +148,7 @@ span.black {
 /* prices and plans */
 
 .pricing-container {
-    padding: 5rem;
+    padding-bottom: 5rem;
     text-align: center;
 }
 
@@ -162,18 +163,24 @@ span.black {
 .plans-container {
     display: flex;
     justify-content: space-between;
+    width: 90%;
     margin: 50px auto 0;
 }
 
 .plan {
     flex: 1;
+    min-width: 225px;
     max-width: 275px;
-    margin: 20px 0;
+    margin: 0 20px;
+}
+
+.plan ul {
+    padding: 0;
 }
 
 .plan li {
-    height: 70px;
-    padding: 10px;
+    height: 50px;
+    line-height: 50px;
     background-color: #e0e9ea;
     color: #333;
 }
@@ -186,7 +193,7 @@ span.black {
     background-color: #202b34;
     color: #9b50a3;
     margin: 0 auto -50px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     position: relative;
 }
@@ -205,7 +212,7 @@ span.black {
     color: #fff;
     font-size: 24px;
     height: 75px;
-    line-height: 55px;
+    line-height: 75px;
     cursor: pointer;
 }
 
@@ -218,25 +225,26 @@ span.black {
 
 .newsletter {
     background-color: rgb(146, 60, 185);
-    padding: 5rem 0;
+    padding: 5rem 2rem;
     text-align: center;
 }
 
 .newsletter h2 {
     color: #fff;
-    font-size: 30px;
+    font-size: 25px;
     text-shadow: 3px 2px 3px black;
 }
 
 .newsletter p {
-    margin-top: 20px;
-    font-size: 20px;
+    margin: 15px 50px 10px 30px;
     font-weight: bold;
 }
 
 .newsletter input[type="email"]{
     margin-top: 40px;
-    width: 70%;
+    padding-left: 20px;
+    width: 80%;
+    font-size: 18px;
     height: 50px;
     border-radius: 5px;
     border-style: none;
@@ -247,9 +255,6 @@ span.black {
     padding: 15px 60px;
     border: 2px solid #fff;
     border-radius: 10px;
-}
-
-.newsletter input[type="submit"] {
     font-weight: bold;
     color: #fff;
     transition: .5s;
@@ -333,3 +338,47 @@ span.black {
     .contact-container input[type="submit"]:hover {
         background-color: #643369;
     }
+
+    footer {
+        font-size: 18px;
+        text-align: center;
+    }
+
+/* Media Queries */
+
+@media (max-width: 1100px) {
+
+    .plans-container {
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width:720px) {
+    .navbar-items {
+        display: none;
+    }
+
+    .descriptions ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 555px) {
+
+    .plan ul {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-banner h2 {
+        font-size: 30px;
+    }
+
+    .main-banner p {
+        font-size: 18px;
+    }
+}

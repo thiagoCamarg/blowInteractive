@@ -33,6 +33,10 @@ nav p {
     font-weight: bold;
 }
 
+.small-logo {
+    display: none;
+}
+
 span.black {
     color: black;
 }
@@ -357,7 +361,11 @@ span.black {
 }
 
 @media (max-width:720px) {
-    .navbar-items {
+    .small-logo {
+        display: inline-block;
+    }
+
+    .big-logo {
         display: none;
     }
 
@@ -367,6 +375,9 @@ span.black {
 }
 
 @media (max-width: 555px) {
+    .navbar-items {
+        display: none;
+    }
 
     .plan ul {
         margin-top: 20px;
